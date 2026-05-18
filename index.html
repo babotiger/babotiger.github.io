@@ -1,9 +1,51 @@
-<html>
-  <head>
-    <title>
-    </title>
-  </head>
-  <body>
-    안녕하세요. 정원 홈에 오신 것을 환영합니다.
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리반 학급 관리 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏫 우리반 학급 관리</h1>
+        <p>학생들의 소중한 기록을 관리하는 공간입니다.</p>
+    </header>
+
+    <main>
+        <!-- 등록 폼 섹션 -->
+        <section class="form-section">
+            <h2>✍️ 학생 등록 및 글쓰기</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentName">학생 이름</label>
+                    <input type="text" id="studentName" placeholder="이름을 입력하세요" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentPhoto">사진 업로드</label>
+                    <input type="file" id="studentPhoto" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentLog">오늘의 한마디 (글쓰기)</label>
+                    <textarea id="studentLog" rows="4" placeholder="내용을 입력하세요" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">등록하기</button>
+            </form>
+        </section>
+
+        <!-- 피드/카드 섹션 -->
+        <section class="list-section">
+            <h2>👥 우리반 친구들</h2>
+            <div id="studentGrid" class="student-grid">
+                <!-- JS를 통해 여기에 카드가 동적으로 추가됩니다 -->
+            </div>
+        </section>
+    </main>
+
+    <script href="script.js"></script>
+</body>
 </html>
